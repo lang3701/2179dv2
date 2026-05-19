@@ -1,0 +1,65 @@
+state,district,category,type,date,crimes,year
+Malaysia,All,assault,all,1/1/2016,22327,2016
+Malaysia,All,assault,all,1/1/2017,21366,2017
+Malaysia,All,assault,all,1/1/2018,16902,2018
+Malaysia,All,assault,all,1/1/2019,16489,2019
+Malaysia,All,assault,all,1/1/2020,13279,2020
+Malaysia,All,assault,all,1/1/2021,11495,2021
+Malaysia,All,assault,all,1/1/2022,10348,2022
+Malaysia,All,assault,all,1/1/2023,10453,2023
+Malaysia,All,assault,Causing Injury,1/1/2016,5531,2016
+Malaysia,All,assault,Causing Injury,1/1/2017,5024,2017
+Malaysia,All,assault,Causing Injury,1/1/2018,4660,2018
+Malaysia,All,assault,Causing Injury,1/1/2019,4712,2019
+Malaysia,All,assault,Causing Injury,1/1/2020,4118,2020
+Malaysia,All,assault,Causing Injury,1/1/2021,4063,2021
+Malaysia,All,assault,Causing Injury,1/1/2022,3807,2022
+Malaysia,All,assault,Causing Injury,1/1/2023,3693,2023
+Malaysia,All,assault,Murder,1/1/2016,456,2016
+Malaysia,All,assault,Murder,1/1/2017,379,2017
+Malaysia,All,assault,Murder,1/1/2018,323,2018
+Malaysia,All,assault,Murder,1/1/2019,310,2019
+Malaysia,All,assault,Murder,1/1/2020,253,2020
+Malaysia,All,assault,Murder,1/1/2021,243,2021
+Malaysia,All,assault,Murder,1/1/2022,240,2022
+Malaysia,All,assault,Murder,1/1/2023,258,2023
+Malaysia,All,assault,Sexual Violence,1/1/2016,1886,2016
+Malaysia,All,assault,Sexual Violence,1/1/2017,1835,2017
+Malaysia,All,assault,Sexual Violence,1/1/2018,1648,2018
+Malaysia,All,assault,Sexual Violence,1/1/2019,1738,2019
+Malaysia,All,assault,Sexual Violence,1/1/2020,1582,2020
+Malaysia,All,assault,Sexual Violence,1/1/2021,1553,2021
+Malaysia,All,assault,Sexual Violence,1/1/2022,1712,2022
+Malaysia,All,assault,Sexual Violence,1/1/2023,1914,2023
+Malaysia,All,assault,Gang Robbery,1/1/2016,65,2016
+Malaysia,All,assault,Gang Robbery,1/1/2017,31,2017
+Malaysia,All,assault,Gang Robbery,1/1/2018,31,2018
+Malaysia,All,assault,Gang Robbery,1/1/2019,21,2019
+Malaysia,All,assault,Gang Robbery,1/1/2020,6,2020
+Malaysia,All,assault,Gang Robbery,1/1/2021,5,2021
+Malaysia,All,assault,Gang Robbery,1/1/2022,16,2022
+Malaysia,All,assault,Gang Robbery,1/1/2023,30,2023
+Malaysia,All,assault,Gang Robbery,1/1/2016,10907,2016
+Malaysia,All,assault,Gang Robbery,1/1/2017,9779,2017
+Malaysia,All,assault,Gang Robbery,1/1/2018,6543,2018
+Malaysia,All,assault,Gang Robbery,1/1/2019,6058,2019
+Malaysia,All,assault,Gang Robbery,1/1/2020,2992,2020
+Malaysia,All,assault,Gang Robbery,1/1/2021,3071,2021
+Malaysia,All,assault,Gang Robbery,1/1/2022,2432,2022
+Malaysia,All,assault,Gang Robbery,1/1/2023,2578,2023
+Malaysia,All,assault,Solo Robbery,1/1/2016,19,2016
+Malaysia,All,assault,Solo Robbery,1/1/2017,3,2017
+Malaysia,All,assault,Solo Robbery,1/1/2018,9,2018
+Malaysia,All,assault,Solo Robbery,1/1/2019,9,2019
+Malaysia,All,assault,Solo Robbery,1/1/2020,5,2020
+Malaysia,All,assault,Solo Robbery,1/1/2021,2,2021
+Malaysia,All,assault,Solo Robbery,1/1/2022,7,2022
+Malaysia,All,assault,Solo Robbery,1/1/2023,13,2023
+Malaysia,All,assault,Solo Robbery,1/1/2016,3463,2016
+Malaysia,All,assault,Solo Robbery,1/1/2017,4315,2017
+Malaysia,All,assault,Solo Robbery,1/1/2018,3688,2018
+Malaysia,All,assault,Solo Robbery,1/1/2019,3641,2019
+Malaysia,All,assault,Solo Robbery,1/1/2020,4323,2020
+Malaysia,All,assault,Solo Robbery,1/1/2021,2558,2021
+Malaysia,All,assault,Solo Robbery,1/1/2022,2134,2022
+Malaysia,All,assault,Solo Robbery,1/1/2023,1967,2023

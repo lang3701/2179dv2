@@ -1,0 +1,49 @@
+state,district,category,type,date,crimes,year
+Malaysia,All,property,all,1/1/2016,90028,2016
+Malaysia,All,property,all,1/1/2017,77804,2017
+Malaysia,All,property,all,1/1/2018,71760,2018
+Malaysia,All,property,all,1/1/2019,66967,2019
+Malaysia,All,property,all,1/1/2020,52344,2020
+Malaysia,All,property,all,1/1/2021,41479,2021
+Malaysia,All,property,all,1/1/2022,40465,2022
+Malaysia,All,property,all,1/1/2023,41991,2023
+Malaysia,All,property,Break In,1/1/2016,18760,2016
+Malaysia,All,property,Break In,1/1/2017,16201,2017
+Malaysia,All,property,Break In,1/1/2018,15742,2018
+Malaysia,All,property,Break In,1/1/2019,16497,2019
+Malaysia,All,property,Break In,1/1/2020,14040,2020
+Malaysia,All,property,Break In,1/1/2021,11352,2021
+Malaysia,All,property,Break In,1/1/2022,10585,2022
+Malaysia,All,property,Break In,1/1/2023,11557,2023
+Malaysia,All,property,Non-vehicle Theft,1/1/2016,22857,2016
+Malaysia,All,property,Non-vehicle Theft,1/1/2017,19444,2017
+Malaysia,All,property,Non-vehicle Theft,1/1/2018,20065,2018
+Malaysia,All,property,Non-vehicle Theft,1/1/2019,19603,2019
+Malaysia,All,property,Non-vehicle Theft,1/1/2020,16725,2020
+Malaysia,All,property,Non-vehicle Theft,1/1/2021,16695,2021
+Malaysia,All,property,Non-vehicle Theft,1/1/2022,15434,2022
+Malaysia,All,property,Non-vehicle Theft,1/1/2023,15837,2023
+Malaysia,All,property,Lorry Theft,1/1/2016,3050,2016
+Malaysia,All,property,Lorry Theft,1/1/2017,2102,2017
+Malaysia,All,property,Lorry Theft,1/1/2018,1761,2018
+Malaysia,All,property,Lorry Theft,1/1/2019,1549,2019
+Malaysia,All,property,Lorry Theft,1/1/2020,921,2020
+Malaysia,All,property,Lorry Theft,1/1/2021,639,2021
+Malaysia,All,property,Lorry Theft,1/1/2022,718,2022
+Malaysia,All,property,Lorry Theft,1/1/2023,764,2023
+Malaysia,All,property,Motorcar Theft,1/1/2016,10607,2016
+Malaysia,All,property,Motorcar Theft,1/1/2017,8480,2017
+Malaysia,All,property,Motorcar Theft,1/1/2018,7413,2018
+Malaysia,All,property,Motorcar Theft,1/1/2019,6817,2019
+Malaysia,All,property,Motorcar Theft,1/1/2020,4599,2020
+Malaysia,All,property,Motorcar Theft,1/1/2021,2849,2021
+Malaysia,All,property,Motorcar Theft,1/1/2022,3271,2022
+Malaysia,All,property,Motorcar Theft,1/1/2023,3245,2023
+Malaysia,All,property,Motorcycle Theft,1/1/2016,34754,2016
+Malaysia,All,property,Motorcycle Theft,1/1/2017,31577,2017
+Malaysia,All,property,Motorcycle Theft,1/1/2018,26779,2018
+Malaysia,All,property,Motorcycle Theft,1/1/2019,22501,2019
+Malaysia,All,property,Motorcycle Theft,1/1/2020,16059,2020
+Malaysia,All,property,Motorcycle Theft,1/1/2021,9944,2021
+Malaysia,All,property,Motorcycle Theft,1/1/2022,10457,2022
+Malaysia,All,property,Motorcycle Theft,1/1/2023,10588,2023
