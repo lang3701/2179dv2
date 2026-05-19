@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/totalprisoners_state.csv"
+  },
+  "width": "container",
+  "height": 300,
+  "transform": [
+    {"filter": "datum.state != 'Malaysia'"},
+    {"filter": "datum.sex == 'both'"},
+    {"calculate": "year(toDate(datum.date))", "as": "year"}
+  ],
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "prisoners",
+      "type": "quantitative",
+      "title": "Number of Prisoners"
+    },
+    "color": {
+        "field": "state",
+        "type": "nominal",
+        "title": "State",
+        "scale": {
+            "domain": [
+            "Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan",
+            "Pahang", "Perak", "Pulau Pinang", "Sabah", "Sarawak",
+            "Selangor", "Terengganu"
+            ],
+            "range": [
+            "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
+            "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
+            "#aec7e8", "#ffbb78"
+            ]
+        },
+        "legend": {"orient": "right"}
+    }
+  }
+}

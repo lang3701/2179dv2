@@ -1,0 +1,90 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 300,
+    "transform": [
+        {
+            "filter": "datum.type != 'all'"
+        },
+        {"filter": "Year_selection == null || datum.year == Year_selection"},
+        {
+            "aggregate": [
+                {
+                    "op": "sum",
+                    "field": "crimes",
+                    "as": "total_crimes"
+                }
+            ],
+            "groupby": ["type"]
+        },
+        {
+            "joinaggregate": [
+                {
+                    "op": "max",
+                    "field": "total_crimes",
+                    "as": "max_crime"
+                }
+            ]
+        }
+    ],
+    "params": [
+        {
+            "name": "Year_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "2016",
+                    "2017",
+                    "2018",
+                    "2019",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023"
+                ],
+                "labels":[
+                    "Show All",
+                    "2016",
+                    "2017",
+                    "2018",
+                    "2019",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023"
+                ],
+                "name": "Year Selection: "
+            }
+        }
+    ],
+    "data": {
+        "url": "data/property_data.csv"
+    },
+    "mark": {
+        "type": "bar"
+    },
+    "encoding": {
+        "x": {
+            "field": "total_crimes",
+            "type": "quantitative",
+            "title": "Number of Crimes",
+            "axis": {
+                "labelAngle": 0
+            }
+        },
+        "y": {
+            "field": "type",
+            "type": "nominal",
+            "title": "Crime Type",
+            "sort": { "encoding": "x", "order": "descending" }
+        },
+        "color": {
+            "condition": {
+                "test": "datum.total_crimes == datum.max_crime",
+                "value": "#b22222"
+            },
+            "value": "lightgrey"
+        }
+    }
+}

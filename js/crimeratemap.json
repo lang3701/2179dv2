@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 500,
+  "projection": {"type": "equirectangular"},
+  "data": {
+    "url": "data/malaysia-states.topojson",
+    "format": {"type": "topojson", "feature": "states"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.Name",
+      "from": {
+        "data": {
+          "url": "data/crimetotals_district.csv"
+        },
+        "key": "state",
+        "fields": ["crimes"]
+      }
+    }
+  ],
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1},
+  "encoding": {
+    "color": {
+      "field": "crimes",
+      "type": "quantitative",
+      "scale": {
+        "type": "threshold",
+        "domain": [1000, 2000, 5000],
+        "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+        }
+    }
+  }
+}

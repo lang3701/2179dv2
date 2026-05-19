@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/crime_total_malaysia.csv"
+  },
+  "width": "container",
+  "height": 270,
+  "transform": [
+    {"filter": "datum.type == 'all'"},
+    {"filter": "datum.category != 'total'"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "crimes",
+      "type": "quantitative",
+      "title": "Number of Crimes"
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "title": "Crime Category",
+      "legend": {"orient": "bottom"}
+    }
+  }
+}

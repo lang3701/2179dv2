@@ -1,0 +1,69 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": { "url": "data/drug_arrests_2019.csv"},
+  "spacing": 0,
+  "hconcat": [{
+    "width":300,
+    "height":300,
+    "transform": [{
+      "filter": {"field": "sex", "equal": "female"}
+    }],
+    "title": "Female",
+    "mark": "bar",
+    "encoding": {
+      "y": {
+        "field": "age", "axis": null, "sort": "descending"
+      },
+      "x": {
+        "aggregate": "sum", "field": "drug_arrests",
+        "title": "population",
+        "axis": {"format": "s"},
+        "scale": {"reverse": true, "domainMax": 45000}
+      },
+      "color": {
+        "field": "sex",
+        "scale": {"range": ["#675193", "#ca8861"]},
+        "legend": null
+      }
+    }
+  }, {
+    "width": 20,
+    "view": {"stroke": null},
+    "mark": {
+      "type": "text",
+      "align": "center"
+    },
+    "encoding": {
+      "y": {"field": "age", "type": "ordinal", "axis": null, "sort": "descending"},
+      "text": {"field": "age", "type": "ordinal"}
+    }
+  }, {
+    "width":300,
+    "height":300,
+    "transform": [{
+      "filter": {"field": "sex", "equal": "male"}
+    }],
+    "title": "Male",
+    "mark": "bar",
+    "encoding": {
+      "y": {
+        "field": "age", "title": null,
+        "axis": null, "sort": "descending"
+      },
+      "x": {
+        "aggregate": "sum", "field": "drug_arrests",
+        "title": "population",
+        "axis": {"format": "s"},
+        "scale": {"domainMax": 45000}
+      },
+      "color": {
+        "field": "sex",
+        "legend": null
+      }
+    }
+  }],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
+}

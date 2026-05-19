@@ -1,0 +1,124 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/crimetotals_district.csv"
+  },
+  "width": "container",
+  "height": 270,
+  "transform": [
+    {"filter": "datum.type == 'all'"},
+    {"filter": "datum.state == State_selection"},
+    {"calculate": "year(toDate(datum.date))", "as": "year"}
+  ],
+  "params": [
+    {
+      "name": "State_selection",
+      "value": "Johor",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Johor",
+          "Kedah",
+          "Kelantan",
+          "Melaka",
+          "Negeri Sembilan",
+          "Pahang",
+          "Perak",
+          "Perlis",
+          "Labuan",
+          "Pulau Pinang",
+          "Sabah",
+          "Sarawak",
+          "Selangor",
+          "Terengganu",
+          "Kuala Lumpur",
+          "Putrajaya"
+        ],
+        "labels": [
+          "Johor",
+          "Kedah",
+          "Kelantan",
+          "Melaka",
+          "Negeri Sembilan",
+          "Pahang",
+          "Perak",
+          "Perlis",
+          "Labuan",
+          "Pulau Pinang",
+          "Sabah",
+          "Sarawak",
+          "Selangor",
+          "Terengganu",
+          "Kuala Lumpur",
+          "Putrajaya"
+        ],
+        "name": "State Selection: "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "crimes",
+          "type": "quantitative",
+          "title": "Number of Crimes",
+          "sort": {
+            "encoding": "x",
+            "order": "descending"
+          }
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "title": "Crime Category",
+          "legend": {
+            "orient": "bottom"
+          }
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == '2023'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "crimes",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "category",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

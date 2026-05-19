@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "data/prisoners_state.csv"},
+  "params": [
+    {
+      "name": "State_selection",
+      "value": "Johor",
+      "bind": {
+        "input": "select",
+        "options": ["Johor","Kedah","Kelantan","Melaka","Negeri Sembilan","Pahang","Perak","Pulau Pinang","Sabah","Sarawak","Selangor","Terengganu"],
+        "name": "State: "
+      }
+    }
+  ],
+  "width": "container",
+  "height": 300,
+  "layer": [
+    {
+      "transform": [
+        {"filter": "datum.state == State_selection"},
+        {"filter": "datum.sex != 'both'"},
+        {"aggregate": [{"op": "sum", "field": "prisoners", "as": "total"}], "groupby": ["sex"]}
+      ],
+      "mark": {"type": "arc", "innerRadius": 80},
+      "encoding": {
+        "theta": {"field": "total", "type": "quantitative"},
+        "color": {
+          "field": "sex",
+          "type": "nominal",
+          "scale": {
+            "domain": ["male", "female"],
+            "range": ["#4C78A8", "#F58518"]
+          },
+          "legend": {"orient": "bottom"}
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.state == State_selection"},
+        {"filter": "datum.sex != 'both'"},
+        {"aggregate": [{"op": "sum", "field": "prisoners", "as": "grand_total"}]}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 16,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {"field": "grand_total", "type": "quantitative", "format": ","}
+      }
+    },
+    {
+        "transform": [
+        {"filter": "datum.state == State_selection"},
+        {"filter": "datum.sex != 'both'"},
+        {"aggregate": [{"op": "sum", "field": "prisoners", "as": "grand_total"}]}
+        ],
+        "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 12,
+        "dy": 20
+        },
+        "encoding": {
+        "text": {"value": "prisoners"}
+        }
+    }
+  ]
+}
