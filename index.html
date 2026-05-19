@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime, Poverty & Imprisonment in Malaysia</title>
+
+     <!-- Import Vega & Vega-Lite -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Import google fonts-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Young+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+    <div class="page">
+
+        <!-- title -->
+        <div class="pure-g title">
+            <div class="pure-u-1-1">
+                <h1 id="title">
+                    Doing The Time: Crime, Prisons <br>& Poverty in Malaysia 
+                </h1>
+                <p>
+                    An exploration of how crime, poverty and incarceration differ <br>
+                    across Malaysian states over time.
+                </p>
+            </div>
+        </div>
+
+        <!-- first row-->
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div class="description description-left">
+                    <h2>How has crime in Malaysia <br>changed over time?</h2>
+                    <p>Crime in Malaysia has changed significantly over the past decade. 
+                        While overall crime rates have generally declined, different categories of crime have followed very different patterns. 
+                        Property crimes such as vehicle theft and burglary remain among the most common offences, while violent 
+                        crimes such as murder and assault occur less frequently but continue to shape public perceptions of safety. 
+                        These visualisations explore how crime trends have evolved over time and which types of offences continue to affect Malaysians the most. </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <p id="chart-title">Trends of Crime in Malaysia</p>
+                <div id="vis1" class="vis-container"></div>
+            </div>
+        </div>
+
+        <!-- second row-->
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <p id="chart-title">Assault Crime in Malaysia</p>
+                <div id="vis2" class="vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <p id="chart-title">Property Crime in Malaysia</p>
+                <div id="vis3" class="vis-container"></div>
+            </div>
+        </div>
+
+
+         <!-- third row-->
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div class="description description-left">
+                    <h2>How does crime differ <br>across states?</h2>
+                    <p>Crime is not distributed evenly across Malaysia. 
+                        Urban and densely populated states often record higher crime rates, while smaller states may 
+                        experience very different patterns of criminal activity. Socioeconomic conditions, population size, and 
+                        regional differences all contribute to these variations. This section explores how crime rates differ 
+                        across Malaysian states and highlights which areas experience the highest levels of criminal activity over time. </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <p id="chart-title">Crime Trends by State</p>
+                <div id="vis6" class="vis-container"></div>
+            </div>
+        </div>
+
+        <!-- fourth row-->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <p id="chart-title">Crime Rates Across States</p>
+                <div id="vis5" class="vis-container"></div>
+            </div>
+        </div>
+
+        <!-- fifth row-->
+        <div class="pure-g">
+
+            <div class="pure-u-1-2">
+                <div class="description description-left">
+                    <h2>How does crime differ <br>across states?</h2>
+                    <p>Patterns of imprisonment also vary across Malaysia. Some states maintain consistently larger prison populations, 
+                        while others show lower incarceration levels despite changes in crime rates. Gender differences are also significant, 
+                        with male prisoners making up the vast majority of the prison population nationwide. These visualisations 
+                        examine how imprisonment differs across states and how prison populations have changed over time. </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <p id="chart-title">Drug Arrests in 2019</p>
+                <div id="vis4" class="vis-container"></div>
+            </div>
+
+        </div>
+
+        <!-- sixth row-->
+        <div class="pure-g">
+
+            <div class="pure-u-1-2">
+                <p id="chart-title">Gender of Prisoners by State</p>
+                <div id="vis8" class="vis-container"></div>
+            </div>
+
+             <div class="pure-u-1-2">
+                <p id="chart-title">Prisoners by State</p>
+                <div id="vis7" class="vis-container"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var vis1 = "js/vis1.json";
+        var vis2 = "js/stackedbarchart_assault.json"
+        var vis3 = "js/stackedbarchart_property.json"
+        var vis4 = "js/drugpyramid.json"
+        var vis5 = "js/crimeratemap.json"
+        var vis6 = "js/linecrimebystate.json"
+        var vis7 = "js/totalprisonersstate.json"
+        var vis8 = "js/prisoners_sex_ratio.json"
+
+        vegaEmbed('#vis1', vis1, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis2', vis2, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis3', vis3, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis4', vis4, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis5', vis5, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis6', vis6, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis7', vis7, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis8', vis8, { "actions": false }).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+  </script>
+</body>
+</html>
