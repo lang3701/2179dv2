@@ -1,0 +1,49 @@
+h1 {
+    font-family: 'Libre Bodoni';
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: 'Open Sans';
+    font-size: 25px;
+}
+
+p {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.chart-title {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.page {
+    width: 1300px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
+
+.title {
+    background-color: #ae1b3f;
+    width: 98%;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.description-left {
+    padding-right: 50px;
+}
+
+.vis-container {
+    width: 100%;
+}
+
+.pure-g {
+    margin-bottom: 40px;
+}
